@@ -17,9 +17,3 @@ java_shade = rule(
     outputs = {
       "jar": "%{name}.jar"
     })
-
-def _mvn_name(coord):
-  nocolon = "_".join(coord.split(":"))
-  nodot = "_".join(nocolon.split("."))
-  nodash = "_".join(nodot.split("-"))
-  return nodash
