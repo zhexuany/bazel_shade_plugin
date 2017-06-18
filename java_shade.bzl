@@ -2,7 +2,7 @@ def _shade_impl(ctx):
   ctx.action(
     inputs=[ctx.file.rules, ctx.file.input_jar],
     outputs=[ctx.outputs.jar],
-    executable=ctx.executable._jarjar_runner,
+    executable=ctx.executable._shade_runner,
     progress_message="jarjar %s" % ctx.label,
     arguments=["process", ctx.file.rules.path, ctx.file.input_jar.path, ctx.outputs.jar.path])
 
